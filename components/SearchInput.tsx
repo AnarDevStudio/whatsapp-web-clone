@@ -36,7 +36,7 @@ export default function SearchInput({ placeholder }: SearchInput) {
   };
 
   return (
-    <div className="bg-[#2e2f2f] rounded-full h-9 flex items-center pl-2 m-2">
+    <div className="bg-[#2e2f2f] rounded-full h-9 flex items-center pl-2 m-2 mb-5">
       <span className="text-[#abacac] ml-1">
         <svg
           viewBox="0 0 24 24"

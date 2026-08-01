@@ -10,7 +10,7 @@ export default function App(){
   return (
     <>
       <Sidebar setIndex={setSelected}/>
-      <Basebar selected={selected}/>
+      <Basebar selected={selected} changeIndex={() => {}}/>
       <ChatPage/>
     </>
     
