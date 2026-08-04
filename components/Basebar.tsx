@@ -1,12 +1,12 @@
 import { headerType } from "./Header";
-import Messages from "@/views/base/Messages";
+import Contacts from "@/views/base/Contacts";
 import Calls from "@/views/base/Calls";
 import Status from "@/views/base/Status";
 
-export default function Basebar({ selected, changeIndex }: { selected: number; changeIndex: () => void }) {
+export default function Basebar({ selected, setSelectedPage }: { selected: number; setSelectedPage: (index: number) => void }) {
 
   const basePageType = () => {
-    if(selected === 0) return <Messages changeIndex={changeIndex}/>
+    if(selected === 0) return <Contacts setSelectedPage={setSelectedPage}/>
     if(selected === 1) return <Calls/>
     if(selected == 2) return <Status/>
   }

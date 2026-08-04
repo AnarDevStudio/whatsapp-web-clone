@@ -7,11 +7,12 @@ import { useState } from "react";
 
 export default function App(){
   const [selected, setSelected] = useState(0)
+  const [selectedPage, setSelectedPage] = useState(0)
   return (
     <>
       <Sidebar setIndex={setSelected}/>
-      <Basebar selected={selected} changeIndex={() => {}}/>
-      <ChatPage/>
+      <Basebar selected={selected} setSelectedPage={setSelectedPage}/>
+      <ChatPage selectedPage={selectedPage}/>
     </>
     
   )

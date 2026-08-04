@@ -1,8 +1,12 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 
-export default function Sidebar({setIndex}: { setIndex: (index: number) => void }) {
+export default function Sidebar({
+  setIndex,
+}: {
+  setIndex: (index: number) => void;
+}) {
   const [chosed, setChosed] = useState(0);
 
   const handleClick = (index: number) => {
@@ -15,7 +19,7 @@ export default function Sidebar({setIndex}: { setIndex: (index: number) => void 
     <aside className="h-screen bg-[#1d1f1f] w-fit p-2.5 border-r border-neutral-700 flex justify-center">
       <div className="flex h-full flex-col justify-between items-center">
         <div className="flex flex-col items-center">
-          <SVGs handleClick={handleClick} chosed={chosed}/>
+          <SVGs handleClick={handleClick} chosed={chosed} />
           <hr className="text-[#343636] w-8 mt-3 mb-3" />
           <img
             onClick={() => setIndex(5)}
@@ -42,7 +46,12 @@ export default function Sidebar({setIndex}: { setIndex: (index: number) => void 
             </svg>
           </div>
           <div className="group hover:bg-[#343636] p-2 rounded-full">
-            <div className="rounded-full w-6 h-6 bg-blue-600" onClick={() => {handleClick(6)}}></div>
+            <div
+              className="rounded-full w-6 h-6 bg-blue-600"
+              onClick={() => {
+                handleClick(6);
+              }}
+            ></div>
           </div>
         </div>
       </div>
@@ -68,7 +77,9 @@ function SVGs({
     <div className="flex flex-col space-y-1 items-center justify-center">
       {svgs.map((svg, index) => (
         <div
-          onClick={() => {handleClick(index)}}
+          onClick={() => {
+            handleClick(index);
+          }}
           className={`transition-all text-center  p-2 ${chosed === index ? "text-white bg-[#343636] rounded-full p-2" : "text-[#a5a5a5]"}`}
           key={index}
           dangerouslySetInnerHTML={{ __html: svg }}

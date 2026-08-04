@@ -2,8 +2,7 @@ import Contact from "@/components/Contact";
 import { useState } from "react";
 import SearchInput from "@/components/SearchInput";
 
-
-export default function Messages({changeIndex} : {changeIndex: () => void}) {
+export default function Contacts({setSelectedPage}: {setSelectedPage: (index: number) => void}) {
   const length = 5;
   const seqArray = Array.from({ length }, (_, index) => index);
   const [index, setIndex] = useState<number | null>(null);
@@ -14,7 +13,7 @@ export default function Messages({changeIndex} : {changeIndex: () => void}) {
       
     } else {
       setIndex(n);
-      changeIndex();
+      setSelectedPage(n + 1);
     }
   };
 
