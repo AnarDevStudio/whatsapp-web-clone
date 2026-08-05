@@ -25,7 +25,7 @@ export default function Contacts({setSelectedPage}: {setSelectedPage: (index: nu
           key={n}
           classA={index === n ? "bg-[#262524]" : ""}
           onClick={() => handleClick(n)}
-          name="TURAL Emi"
+          name="Jonny"
           message="Salam Anar"
           time="14:23"
           profile="SA"
